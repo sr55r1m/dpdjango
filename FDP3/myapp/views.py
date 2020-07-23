@@ -20,4 +20,16 @@ def hy(request,us):
 	# 'APP_DIRS': True, predefined paths templatesDIR holding userappDIR with html files
 	return render(request,'myapp/sample.html',{'r':us})
 
+def hy2(request,us,rl,ag):
+	pms = {'user':us,'roll':rl,'age':ag}
+	return render(request,'myapp/hy2-3para.html',{'g':pms})
 
+def register(request):
+	if request.method == 'POST':
+		uname = request.POST['uname']
+		upwd = request.POST['upwd']
+		uage = request.POST['uage']
+		data ={'uname':uname,'upwd':upwd, 'uage':uage}
+		return render(request,'myapp/display.html',data)
+
+	return render(request,'myapp/register.html',{})
