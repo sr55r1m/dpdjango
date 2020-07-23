@@ -1,0 +1,79 @@
+22-07-2020:
+===========
+
+	Good Morning Respected Sir/Mam
+	
+	Django-Project Creation:
+	--------------------------------
+		- python -V
+		- django-admin --version
+		- django-admin startproject "projectname"
+			-> It automatically creates Admin app with Project name
+	-> To run a server we need to run a command that is "python manage.py runserver"
+	
+	User Creation App:
+	-------------------------
+	-> We need to navigate for project location
+	-> so we need to run a command in command prompt for creation of a user app
+		- django-admin startapp "userappname"
+	
+	Configuring Admin app in Settings.py,Urls.py and in Userapp creating a function in Views.py:
+	---------------------------------------------------------------------
+	
+	-> In FDP3 you can observe settings.py so in this file we need to register our app (i.e., Application definition).
+	
+	-> We need to open urls.py just we need to add url path and our app function
+		we need to import our app to this location
+		-> from myapp import views
+		
+	we need to give a path for that function
+		-> urlpatterns =[
+			path('hi/',views.hello,name="hq"),
+		]
+		-> hi -> url that can be entered in browser
+		-> hello -> to perform that action
+		-> name -> forms -> linking
+--VIEWS.PY
+django.shortcuts import render -->( to render html pages )
+from django.http import HttpResponse
+# Create your views here.
+
+def hello(request):
+	return HttpResponse("<h1 style='color:blue'>Hello good morning to all</h1>")
+======================================
+w3wscools.com
+HTML, CSS, JAVASCRIPT, JQUERY
+======================================
+Response with parameters in an url:
+------------------------------------------
+		=> http://localhost:8000/s/raju->User
+			
+			Hello Good Morning raju
+		
+		=> url
+			-> path('s/<str:r>/',views.hg),
+		=> views
+			-> def hg(request,r):
+				return HttpResponse("Hello "+r)
+	HTML,CSS,Javascript,Jquery:
+	===========================
+	Html -> Templates => .html 
+	
+	url:
+	-----
+	path('rw/<str:name>/',views.fr),,
+	
+	views:
+	--------
+	def fr(re,name):
+		return render(re,'myapp/sample.html')
+	
+	render:
+	--------
+	render(re,'.html',{})
+	
+	Templates: -> myapp -> sample.html
+			   -> usr -> sample.html
+
+
+
