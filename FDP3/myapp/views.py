@@ -33,3 +33,12 @@ def register(request):
 		return render(request,'myapp/display.html',data)
 
 	return render(request,'myapp/register.html',{})
+
+def extcss(request):
+	return render(request,'myapp/extcss.html',{})
+
+def jsac(request):
+	return render(request,'myapp/javasc.html')
+
+def jsac2(request):
+	return render(request,'myapp/jsac2.html')

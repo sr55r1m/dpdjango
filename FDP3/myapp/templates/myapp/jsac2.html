@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script operations</title>
+	<script type="text/javascript" src="{% static 'js/addnu.js' %}"}>
+		
+	</script>
+
+</head>
+<body>
+	<form action="" method="POST">
+		{% csrf_token %}
+		NUMBER: <input type="text" name="fval" id="first" required=""><br/>
+		Sec Number <input type="text" name="sval" id="second" required=""><br/>
+		<button type="Submit" onclick="ad()"> AddValues </button>
+	</form>	
+
+
+
+</body>
+</html>

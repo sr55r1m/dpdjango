@@ -24,6 +24,9 @@ urlpatterns = [
     path('user/<str:na>/<int:roll>/', views.stu),
     path('rw/<str:us>/', views.hy),
     path('hy2/<str:us>/<int:rl>/<int:ag>/', views.hy2),    
-    path('register/', views.register,name='register'),    
+    path('register/', views.register,name='register'),  
+    path('extcss/', views.extcss,name='extcss'),  
+    path('jst/', views.jsac),
+    path('jst2/', views.jsac2),    
 
 ]

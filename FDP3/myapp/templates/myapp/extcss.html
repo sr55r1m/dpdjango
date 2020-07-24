@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form Submission</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/first.css' %}">
+	<script type="text/javascript">
+		alert('welcome');
+	</script>
+</head>
+<body>
+
+	<!-- CSRF_TOKEN should be placed immediately in next line to from tag -->
+    <form action="#" method="POST"> 
+    	{% csrf_token %}
+    	<p id="pstyle">     
+        <label class=lbstyle >Name    : </label>
+        <input type="text" name="uname"/> <br/> 
+
+        Password:<input type="password" name="upwd"/> <br/>  
+        <label class=lbstyle >Email  : </label>
+        <input type="email" name="uemail"/> <br/> 
+
+        Tel :<input type="tel" name="utel"/> <br/>
+        <button type="submit" >Register</button> 
+        <p/>
+
+     </form>  
+
+</body>
+</html>
