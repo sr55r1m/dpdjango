@@ -9,12 +9,14 @@
 
 </head>
 <body>
-	<form action="" method="POST">
+	<form>
 		{% csrf_token %}
 		NUMBER: <input type="text" name="fval" id="first" required=""><br/>
 		Sec Number <input type="text" name="sval" id="second" required=""><br/>
-		<button type="Submit" onclick="ad()"> AddValues </button>
+		<input type="button" onclick="ad()" value="Add"> 
+
 	</form>	
+	<h2 id="out"></h2>
 
 
 

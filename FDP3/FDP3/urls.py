@@ -27,6 +27,8 @@ urlpatterns = [
     path('register/', views.register,name='register'),  
     path('extcss/', views.extcss,name='extcss'),  
     path('jst/', views.jsac),
-    path('jst2/', views.jsac2),    
+    path('jst2/', views.jsac2),  
+    path('bot/',views.bot), 
+    path('botint/',views.botint),
 
 ]

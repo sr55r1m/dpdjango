@@ -42,3 +42,12 @@ def jsac(request):
 
 def jsac2(request):
 	return render(request,'myapp/jsac2.html')
+
+def bot(request):
+	return render(request,'myapp/bootext.html')
+
+def botint(request):
+	return render(request,'myapp/bootint.html')
+
+
+
