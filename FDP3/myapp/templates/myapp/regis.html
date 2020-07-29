@@ -1,0 +1,30 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title> with forms</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+	<div clsss="container">
+		<div class="jumbotron col-md-7" style="margin: auto;margin-top: 50px;">
+<!--			{{t.as_p}} -->
+			<form method="POST" action=""></form>
+			<table class="table table-borderless">
+			{% for p in t %}
+			<tr>
+				<td>{{p.label_tag}}</td>
+				<td>{{p}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from myapp.models import Usregister
+from myapp.forms import UsForm
 
 # Create your views here.
 
@@ -34,6 +36,7 @@ def register(request):
 
 	return render(request,'myapp/register.html',{})
 
+
 def extcss(request):
 	return render(request,'myapp/extcss.html',{})
 
@@ -48,6 +51,29 @@ def bot(request):
 
 def botint(request):
 	return render(request,'myapp/bootint.html')
+
+def usrrg(request):
+	if request.method== 'POST':
+		uname = request.POST['uname']
+		pwd = request.POST['pwd']
+		age = request.POST['age']
+		print(uname)
+
+	return render(request,'myapp/usrreg.html')
+
+def usreg(request):
+	if request.method == "POST":
+		e =UsForm(request.POST)
+		if e.is_valid():
+			e.save()
+			return HttpResponse("Record saved")
+
+	e = UsForm()
+	return render(request, 'myapp/regis.html',{'t':e})
+
+def showall(request):
+	r = Usregister.objects.all()
+	return render(request, 'myapp/showall.html',{'d':r})
 
 
 

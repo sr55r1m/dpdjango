@@ -1,4 +1,4 @@
-"""FDP3 URL Configuration
+"""FDP3m URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,23 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hi/', views.hello, name='h'),
-    path('t/<str:name>/', views.te, name='tep'),
-    path('user/<str:na>/<int:roll>/', views.stu),
-    path('rw/<str:us>/', views.hy),
-    path('hy2/<str:us>/<int:rl>/<int:ag>/', views.hy2),    
-    path('register/', views.register,name='register'),  
-    path('extcss/', views.extcss,name='extcss'),  
-    path('jst/', views.jsac),
-    path('jst2/', views.jsac2),  
-    path('bot/',views.bot), 
-    path('botint/',views.botint),
-    path('usrreg/',views.usrrg,name='usrreg'),
-    path('usreg/',views.usreg,name='usreg'),
-    path('sha/',views.showall,name='sha'),
-
 ]
