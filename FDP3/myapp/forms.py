@@ -5,10 +5,11 @@ from django import forms
 class UsForm(ModelForm):
 	class Meta:
 		model = Usregister
-		fields="__all__"
+		#fields="__all__"
+		fields = ["uname"]
 		widgets = {
 		"uname":forms.TextInput(attrs={
-			"class":"form-control col-md-3",
-			"placeholder":"Enterusername"
-		}),
+			"class":"form-control col-md-7",
+			"placeholder":"Enter username",
+			"required":True}),
 		}

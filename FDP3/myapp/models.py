@@ -6,7 +6,7 @@ from django.db import models
 class Usregister(models.Model):
 	uname = models.CharField(max_length=40)
 	pwd =models.CharField(max_length=20)
-	age = models.IntegerField()
+	age = models.IntegerField(blank=True, null=True)
 
 	# to rename table
 	#class Meta:

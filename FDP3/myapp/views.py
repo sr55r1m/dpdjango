@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from myapp.models import Usregister
 from myapp.forms import UsForm
@@ -66,7 +66,8 @@ def usreg(request):
 		e =UsForm(request.POST)
 		if e.is_valid():
 			e.save()
-			return HttpResponse("Record saved")
+			# return HttpResponse("Record saved")
+			return redirect('/sha')
 
 	e = UsForm()
 	return render(request, 'myapp/regis.html',{'t':e})

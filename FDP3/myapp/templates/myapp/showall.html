@@ -12,7 +12,8 @@
 <body>
 	<div clsss="container">
 		<div class="jumbotron col-md-7" style="margin: auto;margin-top: 50px;">
-			<table class="table table-borderless">
+			<h3>Users Data <span style="float:right;font-size: 20px"><a href="{% url 'usreg' %}" class="btn btn-primary">Add Users</a></span></h3>
+			<table class="table table-hover">
 			<tr>
 				<th>user</th>
 				<th>pwd</th>
@@ -22,6 +23,7 @@
 			<tr>
 
 				<td>{{p.uname}}</td>
+				<td>{{p.pwd}}</td>
 				<td>{{p.age}}</td>
 			</tr>
 			{% endfor %}

@@ -12,17 +12,22 @@
 </head>
 <body>
 	<div clsss="container">
-		<div class="jumbotron col-md-7" style="margin: auto;margin-top: 50px;">
+		<div class="jumbotron col-md-7" style="margin: auto;margin-top: 50px; background-color: cadetblue">
 <!--			{{t.as_p}} -->
-			<form method="POST" action=""></form>
-			<table class="table table-borderless">
-			{% for p in t %}
-			<tr>
-				<td>{{p.label_tag}}</td>
-				<td>{{p}}</td>
-			</tr>
-			{% endfor %}
-		</table>
+			<form method="POST" action="">
+					{% csrf_token %} 
+				<table class="table table-borderless">
+					{% for p in t %}
+					<tr>
+		<!--				<td>{{p.label_tag}}</td> -->
+						<td>{{p}}</td>
+					</tr>
+					{% endfor %}
+					
+				</table>
+			
+			<input type="submit" class="btn btn-success" value="register">
+		</form>
 		</div>
 	</div>
 
