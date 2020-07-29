@@ -33,5 +33,7 @@ urlpatterns = [
     path('usrreg/',views.usrrg,name='usrreg'),
     path('usreg/',views.usreg,name='usreg'),
     path('sha/',views.showall,name='sha'),
-
+    path('updt/<int:pe>/',views.update,name='updt'),
+    path('udel/<int:pe>/',views.udel,name='udel'),
+ 
 ]

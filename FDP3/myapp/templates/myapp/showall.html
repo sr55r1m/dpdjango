@@ -12,16 +12,24 @@
 <body>
 	<div clsss="container">
 		<div class="jumbotron col-md-7" style="margin: auto;margin-top: 50px;">
-			<h3>Users Data <span style="float:right;font-size: 20px"><a href="{% url 'usreg' %}" class="btn btn-primary">Add Users</a></span></h3>
+			<h3>Users Data 
+				<span style="float:right;font-size: 20px">
+				<a href="{% url 'usreg' %}" class="btn btn-primary">Add Users</a>
+
+				</span>
+			</h3>
 			<table class="table table-hover">
 			<tr>
+				<th>Sl.no</th>
+				<th>Id.</th>
 				<th>user</th>
 				<th>pwd</th>
 				<th>age</th>
 			</tr>
 			{% for p in d %}
 			<tr>
-
+				<td>{{forloop.counter}}</td>
+				<td>{{p.id}}</td>
 				<td>{{p.uname}}</td>
 				<td>{{p.pwd}}</td>
 				<td>{{p.age}}</td>

@@ -76,5 +76,24 @@ def showall(request):
 	r = Usregister.objects.all()
 	return render(request, 'myapp/showall.html',{'d':r})
 
+def update(request,pe):
+	y =Usregister.objects.get(id=pe)
+	if request.method == "POST":
+		u =UsForm(request.POST,instance=y)
+		if u.is_valid():
+			u.save()
+			return redirect('/sha')
+
+	u =UsForm(instance=y)
+	return render(request, 'myapp/update.html',{'t':u})
+
+def udel(request,pe):
+
+	ra = Usregister.objects.get(id=pe)
+	ra.delete()
+	return redirect('/sha')
+
+
+
 
 
